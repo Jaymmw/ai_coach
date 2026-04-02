@@ -260,20 +260,42 @@ with left:
 
     st.markdown(
         """
-        <div style="
-            background-color:#F6F8FC;
-            border:1px solid #D9E1F2;
-            border-radius:12px;
-            padding:16px 18px;
-            margin-bottom:14px;
-            line-height:1.7;
-            font-size:14px;
-        ">
-            <div style="font-weight:700; margin-bottom:8px; color:#2F3A56;">입력 안내</div>
+        <style>
+        .guide-box {
+            background: var(--secondary-background-color);
+            color: var(--text-color);
+            border: 1px solid rgba(128, 128, 128, 0.25);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+    
+        .guide-box .guide-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+    
+        .guide-box .guide-example {
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+        </style>
+    
+        <div class="guide-box">
+            <div class="guide-title">입력 안내</div>
             <div>1. 지출 내역 1건에 대해 처리 가능합니다.</div>
-            <div>2. 지출 내용을 편하게 입력해주세요.<br>
-            <span style="color:#5B6475;">ex) 2026년 3월 30일 마케팅팀 대리 홍길동이 스타벅스에서 고객 미팅용 다과를 33000원 결제했다.</span></div>
-            <div>3. [날짜, 금액, 목적, 기안자(소속, 직급, 성명), 결제 수단, 비고]의 내용을 AI Agent가 대신 판단하여 지출결의서를 만들어 줍니다!</div>
+            <div>
+                2. 지출 내용을 편하게 입력해주세요.<br>
+                <span class="guide-example">
+                    ex) 2026년 3월 30일 마케팅팀 대리 홍길동이 스타벅스에서 고객 미팅용 다과를 33000원 결제했다.
+                </span>
+            </div>
+            <div>
+                3. [날짜, 금액, 목적, 기안자(소속, 직급, 성명), 결제 수단, 비고]의 내용을 AI Agent가 대신 판단하여 지출결의서를 만들어 줍니다!
+            </div>
         </div>
         """,
         unsafe_allow_html=True
